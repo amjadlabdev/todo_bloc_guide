@@ -1,0 +1,67 @@
+# =============================================================================
+# .gitignore — Tells Git which files/folders to ignore (not track)
+# WHY: Build artifacts, IDE files, and sensitive info should NOT be in repo
+# =============================================================================
+
+# --------------- Flutter / Dart ---------------
+# The build/ folder contains generated files — no need to version-control
+build/
+
+# .dart_tool/ contains package resolution data
+.dart_tool/
+
+# Packages contain symlinks — ignore the symlinks
+.packages
+
+# Pub lockfile — for apps, you CAN commit this; for packages, don't
+# For an application project, it's RECOMMENDED to commit pubspec.lock
+# We'll keep it. But if you want to ignore, uncomment below:
+# pubspec.lock
+
+# Generated Flutter files
+*.g.dart
+*.freezed.dart
+*.config.dart
+
+# --------------- IDE / Editor ---------------
+# VS Code
+.vscode/
+
+# Android Studio / IntelliJ
+.idea/
+
+# --------------- OS Generated ---------------
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# --------------- Flutter Specific ---------------
+# Flutter cache
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Coverage
+coverage/
+
+# --------------- Environment / Secrets ---------------
+# Never commit environment files with API keys!
+.env
+.env.local
+*.env
+
+# --------------- Firebase ---------------
+# Google services files can be sensitive
+# google-services.json
+# GoogleService-Info.plist
+
+# --------------- Miscellaneous ---------------
+*.log
+*.swp
+*.swo

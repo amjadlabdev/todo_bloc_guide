@@ -1,0 +1,39 @@
+# =============================================================================
+# analysis_options.yaml — Dart analyzer configuration
+# WHY: Enforces code quality, style consistency, and catches potential bugs
+# This is like a linter configuration for the whole team
+# =============================================================================
+
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # ----- Style Rules -----
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    prefer_single_quotes: true
+    always_declare_return_types: true
+    always_put_required_named_parameters_first: true
+    
+    # ----- Code Quality -----
+    avoid_print: false          # We use print for educational purposes
+    avoid_empty_else: true
+    avoid_return_types_on_setters: true
+    cancel_subscriptions: true
+    close_sinks: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+    
+    # ----- Readability -----
+    curly_braces_in_flow_control_structures: true
+    prefer_interpolation_to_compose_strings: true
+    unnecessary_string_interpolations: true
+    
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore

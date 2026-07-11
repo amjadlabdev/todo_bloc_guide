@@ -1,0 +1,115 @@
+# =============================================================================
+# pubspec.yaml — The "package manifest" for your Flutter project
+# WHY: Declares project metadata, dependencies, assets, and Flutter version
+# This is the FIRST file Flutter reads when building your app
+# =============================================================================
+
+name: todo_bloc_guide
+description: >
+  A comprehensive, production-ready To-Do app built with Flutter and BLoC (Cubit).
+  This project serves as a complete guide for beginners to learn BLoC/Cubit
+  state management with real-world patterns, local database storage, and
+  interactive UI design.
+
+# Version follows semantic versioning: MAJOR.MINOR.PATCH
+version: 1.0.0+1
+
+# Prevents accidental publishing to pub.dev
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# =============================================================================
+# DEPENDENCIES — Packages your app NEEDS to run
+# =============================================================================
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ---- BLoC / State Management ----
+  # flutter_bloc: The core BLoC library — provides BlocBuilder, BlocProvider, etc.
+  # WHY: This is the ENTIRE reason for this project! It provides:
+  #   - Cubit (simpler state management) and Bloc (event-based state management)
+  #   - BlocBuilder (rebuild UI when state changes)
+  #   - BlocListener (execute one-time actions like showing SnackBar)
+  #   - BlocConsumer (combines builder + listener)
+  #   - BlocProvider (provides bloc/cubit to widget subtree)
+  #   - MultiBlocProvider (provides multiple blocs/cubits)
+  flutter_bloc: ^9.1.1
+
+  # equatable: Makes object comparison easy by value instead of reference
+  # WHY: BLoC states NEED this! Without it, BlocBuilder can't tell if state
+  # actually changed, causing either: no rebuilds (bug) or excess rebuilds (lag)
+  equatable: ^2.0.5
+
+  # ---- Local Database ----
+  # Hive: A lightweight, fast, key-value database written in pure Dart
+  # WHY: We need persistent storage so todos survive app restarts
+  #   - Much faster than SharedPreferences for structured data
+  #   - No native dependencies (pure Dart) = works on all platforms
+  #   - Supports encryption, lazy loading, custom adapters
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0    # Flutter bindings for Hive (initialization, etc.)
+
+  # ---- UUID Generation ----
+  # uuid: Generates universally unique identifiers
+  # WHY: Each todo needs a unique ID for database operations
+  uuid: ^4.5.3
+
+  # ---- Date & Time ----
+  # intl: Internationalization and date formatting
+  # WHY: Format dates in a user-friendly way
+  intl: ^0.20.3
+
+  # ---- UI / Animations ----
+  # flutter_staggered_animations: Beautiful list animations
+  flutter_staggered_animations: ^1.1.1
+
+  # ---- Utilities ----
+  # path_provider: Finds system directories for Hive storage
+  path_provider: ^2.0.15
+
+  # Icons
+  cupertino_icons: ^1.0.6
+
+# =============================================================================
+# DEV_DEPENDENCIES — Packages only needed during DEVELOPMENT
+# =============================================================================
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+  # bloc_test: Testing utilities specifically for BLoC/Cubit
+  # WHY: Makes testing cubits super easy with blocTest() function
+  #   - No need to manually set up streams and expectations
+  #   - Provides act(), expect(), wait(), skip() etc.
+  bloc_test: ^10.0.0
+
+  # mocktail: Mocking library for unit tests (successor to mockito)
+  # WHY: We mock the repository in cubit tests to isolate logic from data
+  mocktail: ^1.0.5
+
+  # Hive generator — generates TypeAdapters from annotations
+  hive_generator_plus: ^5.0.0
+
+  # Build runner — code generation tool
+  build_runner: ^2.4.6
+
+# =============================================================================
+# FLUTTER CONFIGURATION
+# =============================================================================
+flutter:
+  uses-material-design: true
+
+  # Assets (images, fonts, etc.)
+  # assets:
+  #   - assets/images/
+
+  # Fonts
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: assets/fonts/CustomFont-Regular.ttf

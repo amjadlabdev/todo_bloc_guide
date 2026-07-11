@@ -80,7 +80,7 @@ Dart SDK 3.0+
 Android Studio / VS Code
 An emulator or physical device
 Installation
-# 1. Clone the repositorygit clone https://github.com/YOUR_USERNAME/todo_bloc_guide.git# 2. Navigate to project directorycd todo_bloc_guide# 3. Install dependenciesflutter pub get# 4. Generate Hive adapters (for local database serialization)flutter packages pub run build_runner build# 5. Run the appflutter run
+# 1. Clone the repository git clone https://github.com/amjadlabdev/todo_bloc_guide.git# 2. Navigate to project directorycd todo_bloc_guide# 3. Install dependenciesflutter pub get# 4. Generate Hive adapters (for local database serialization)flutter packages pub run build_runner build# 5. Run the appflutter run
 🔧 Key Features
 ✅ Add, Edit, Delete Todos — Full CRUD with BLoC/Cubit
 ✅ Toggle Completion — Mark todos as done/undone

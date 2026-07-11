@@ -4,17 +4,31 @@ A production-ready To-Do application that doubles as a comprehensive, step-by-st
 FlutterDartBLoCLicense
 
 📖 Table of Contents
+
+1- 🤔 Why BLoC/Cubit?
+
+2- 🏗️ Architecture Overview
+
+3- 📚 BLoC vs Cubit — Deep Dive
+
+4- 🧩 Core BLoC Concepts Explained
+
+5- 🚀 Getting Started
+
+6- 📁 Project Structure
+
+7- 🔧 Key Features
+
+8- 🧪 Testing
+
+9- 🤝 Contributing
+
+10- 📄 License
+
+
+
 🤔 Why BLoC/Cubit?
-🏗️ Architecture Overview
-📚 BLoC vs Cubit — Deep Dive
-🧩 Core BLoC Concepts Explained
-🚀 Getting Started
-📁 Project Structure
-🔧 Key Features
-🧪 Testing
-🤝 Contributing
-📄 License
-🤔 Why BLoC/Cubit?
+
 The Problem BLoC Solves
 In Flutter, setState() works for tiny apps. But as your app grows:
 
@@ -80,7 +94,7 @@ Dart SDK 3.0+
 Android Studio / VS Code
 An emulator or physical device
 Installation
-# 1. Clone the repositorygit clone https://github.com/YOUR_USERNAME/todo_bloc_guide.git# 2. Navigate to project directorycd todo_bloc_guide# 3. Install dependenciesflutter pub get# 4. Generate Hive adapters (for local database serialization)flutter packages pub run build_runner build# 5. Run the appflutter run
+# 1. Clone the repository git clone https://github.com/amjadlabdev/todo_bloc_guide.git# 2. Navigate to project directorycd todo_bloc_guide# 3. Install dependenciesflutter pub get# 4. Generate Hive adapters (for local database serialization)flutter packages pub run build_runner build# 5. Run the appflutter run
 🔧 Key Features
 ✅ Add, Edit, Delete Todos — Full CRUD with BLoC/Cubit
 ✅ Toggle Completion — Mark todos as done/undone

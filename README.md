@@ -4,17 +4,31 @@ A production-ready To-Do application that doubles as a comprehensive, step-by-st
 FlutterDartBLoCLicense
 
 📖 Table of Contents
+
+1- 🤔 Why BLoC/Cubit?
+
+2- 🏗️ Architecture Overview
+
+3- 📚 BLoC vs Cubit — Deep Dive
+
+4- 🧩 Core BLoC Concepts Explained
+
+5- 🚀 Getting Started
+
+6- 📁 Project Structure
+
+7- 🔧 Key Features
+
+8- 🧪 Testing
+
+9- 🤝 Contributing
+
+10- 📄 License
+
+
+
 🤔 Why BLoC/Cubit?
-🏗️ Architecture Overview
-📚 BLoC vs Cubit — Deep Dive
-🧩 Core BLoC Concepts Explained
-🚀 Getting Started
-📁 Project Structure
-🔧 Key Features
-🧪 Testing
-🤝 Contributing
-📄 License
-🤔 Why BLoC/Cubit?
+
 The Problem BLoC Solves
 In Flutter, setState() works for tiny apps. But as your app grows:
 
